@@ -49,6 +49,6 @@ class EditMovieController extends Controller
     
             return response()->json($transformer->transformModelToApiData($movie), Response::HTTP_OK);   
         }
-        return response()->json("Please specify a movie to edit", Response::HTTP_NOT_FOUND);
+        return response()->json("Please specify a movie to edit", Response::HTTP_OK);
     }
 }
