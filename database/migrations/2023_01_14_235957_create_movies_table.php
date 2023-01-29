@@ -14,8 +14,22 @@ return new class extends Migration
     public function up()
     {
         Schema::create('movies', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->increments('id');
+            $table->unsignedInteger('category');
+            $table->string('title');
+            $table->string('producer');
+            $table->string('release_year');
+            $table->string('duration');
+            $table->string('language');
+            $table->char('subtitle', 1)->default('0');
+            $table->string('file');
+            $table->string('banner');
+            $table->string('thumbnail')->nullable();
+            $table->text('description');
+            $table->unsignedInteger('uploaded_by');
+            $table->dateTime('created_at')->useCurrent();
+            $table->dateTime('updated_at')->nullable();
+            $table->dateTime('deleted_at')->nullable();
         });
     }
 

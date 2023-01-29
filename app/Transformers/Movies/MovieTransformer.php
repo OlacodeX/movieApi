@@ -23,6 +23,7 @@ class MovieTransformer extends ApiTransformer{
             MovieContract::FILE => $movie->file,
             MovieContract::CATEGORY => $movie->category,
             MovieContract::SUBTITLE => $movie->subtitle,
+            MovieContract::UPLOADED_BY => $movie->uploaded_by,
             MovieContract::CREATED_AT => $movie->created_at,
             MovieContract::UPDATED_AT => $movie->updated_at,
         ]);
