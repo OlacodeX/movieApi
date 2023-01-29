@@ -16,7 +16,8 @@ class CreateMovieController extends Controller
     /**
      * Handle the incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\Movies\CreateMovieRequest  $request
+     * @param  \App\Transformers\Movies\MovieTransformer $transformer
      * @return \Illuminate\Http\Response
      */
     public function __invoke(CreateMovieRequest $request, MovieTransformer $transformer) : JsonResponse

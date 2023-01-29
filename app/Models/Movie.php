@@ -54,4 +54,9 @@ class Movie extends Model
        'uploaded_by',
        'producer'
    ];
+
+   public function movie_category(){
+        // A movie belongs to a category through the category column in the movies table
+        return $this->belongsTo(Category::class, 'category');
+   }
 }
