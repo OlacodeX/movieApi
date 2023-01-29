@@ -15,6 +15,7 @@ class MovieContract implements ContractInterface{
     public const THUMBNAIL = 'thumbnail';
     public const DESCRIPTION = 'description';
     public const CATEGORY = 'category';
+    public const UPLOADED_BY = 'uploaded_by';
     public const CREATED_AT = 'created_at';
     public const UPDATED_AT = 'updated_at';
     public const DELETED_AT = 'deleted_at';
