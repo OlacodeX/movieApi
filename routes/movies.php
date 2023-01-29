@@ -23,5 +23,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // Movies
 Route::prefix('/movie')->name('movie.')->group(function(){
     Route::post('/', \App\Http\Controllers\Movies\CreateMovieController::class)->name('create');
+    Route::patch('/{id}', \App\Http\Controllers\Movies\EditMovieController::class)->name('create');
 });
 
