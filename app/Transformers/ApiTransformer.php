@@ -7,7 +7,7 @@ use Illuminate\Support\Collection as SupportCollection;
 
 abstract class ApiTransformer{
 
-    public function tranformCollectionsToApiData(Collection $collection): array {
+    public function transformCollectionsToApiData(Collection $collection): array {
         $transformed = $collection->map([$this, 'transformModelToApiData']);
 
         return $transformed->all();
