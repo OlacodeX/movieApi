@@ -25,5 +25,6 @@ Route::prefix('/movie')->name('movie.')->group(function(){
     Route::post('/', \App\Http\Controllers\Movies\CreateMovieController::class)->name('create');
     Route::patch('/{id}', \App\Http\Controllers\Movies\EditMovieController::class)->name('edit');
     Route::delete('/{id}', \App\Http\Controllers\Movies\DeleteMovieController::class)->name('delete');
+    Route::get('/{id?}', \App\Http\Controllers\Movies\GetMovieController::class)->name('get');
 });
 
